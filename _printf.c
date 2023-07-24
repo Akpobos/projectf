@@ -8,7 +8,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0, i = 0;
+	int count = 0, i = 0, is_fnd;
 	va_list args;
 
 	if (!format)
@@ -25,7 +25,11 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				count += print_fmt(format[i], args);
+				is_fnd = print_fmt(format[i], args);
+				if (is_fnd < 0)
+					count += _putchar(format[i]);
+				else
+					count += is_fnd;
 			}
 		}
 		else
