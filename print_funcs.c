@@ -31,7 +31,13 @@ int print_str(va_list args)
 		}
 		return (i);
 	}
-	return (0);
+	i += _putchar('(');
+	i += _putchar('n');
+	i += _putchar('u');
+	i += _putchar('l');
+	i += _putchar('l');
+	i += _putchar(')');
+	return (i);
 }
 
 /**
