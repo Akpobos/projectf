@@ -34,3 +34,15 @@ int print_numbers(int num)
 	}
 	return (count);
 }
+
+/**
+ * fmt_space - Clean white space
+ * @str: The buffer
+ * @i: pointer to current position in buffer
+ * Return: Nothing
+ */
+void fmt_space(const char *str, int *i)
+{
+	while (str[*i] == ' ')
+		*i = *i + 1;
+}
