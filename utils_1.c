@@ -51,9 +51,10 @@ void fmt_space(const char *str, int *i)
  * check_specifier - Handles specifiers
  * @c: The character
  * @count: pointer print count
+ * @args: va_list argument
  * Return: Nothing
  */
-void check_specifier(const char c, int *count)
+void check_specifier(const char c, int *count, va_list args)
 {
 	if (c == '%')
 	{
