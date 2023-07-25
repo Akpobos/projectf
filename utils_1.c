@@ -48,6 +48,24 @@ void fmt_space(const char *str, int *i)
 }
 
 /**
+ * print_binary - Prints binary of a number
+ * @num: unsigned int number
+ *
+ * Return: printed count
+ */
+int print_binary(unsigned int num)
+{
+	int count = 0;
+
+	if (num > 0)
+	{
+		count += print_binary(num / 2);
+		count += _putchar((num % 2) + '0');
+	}
+	return (count);
+}
+
+/**
  * check_specifier - Handles specifiers
  * @c: The character
  * @count: pointer print count
