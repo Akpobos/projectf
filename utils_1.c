@@ -56,6 +56,8 @@ void fmt_space(const char *str, int *i)
  */
 void check_specifier(const char c, int *count, va_list args)
 {
+	int is_fnd;
+
 	if (c == '%')
 	{
 		*count += _putchar(c);
