@@ -8,7 +8,8 @@
  */
 int _printf(const char *format, ...)
 {
-	int count = 0, i = 0;
+	int count = 0, i = 0, buff_i = 0;
+	char buffer[BUFFER_SIZE];
 	va_list args;
 
 	if (format == NULL)
@@ -26,14 +27,15 @@ int _printf(const char *format, ...)
 				break;
 			}
 		/*	fmt_space(format, &i);*/
-			check_specifier(format[i], &count, args);
+			check_specifier(format[i], &count, args, buffer, &buff_i);
 		}
 		else
 		{
-			count += _putchar(format[i]);
+			count += add_buffer(format[i], buffer, &buff_i);
 		}
 		i++;
 	}
 	va_end(args);
+	count += print_buffer(buffer, &buff_i);
 	return (count);
 }
