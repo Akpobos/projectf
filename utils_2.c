@@ -8,7 +8,7 @@
  */
 int print_buffer(char *buffer, int *buff_i)
 {
-	int count = write(1, buffer, (*buff_i));
+	int count = write(1, buffer, *buff_i);
 
 	*buff_i = 0;
 	return (count);

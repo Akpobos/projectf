@@ -21,17 +21,17 @@ int print_char(va_list args, char *buffer, int *buff_i)
  */
 int print_str(va_list args, char *buffer, int *buff_i)
 {
-	int i = 0;
+	int i = 0, count = 0;
 	char *str = va_arg(args, char *);
 
 	if (!str)
 		str = "(null)";
 	while (str[i])
 	{
-		add_buffer(str[i], buffer, buff_i);
+		count += add_buffer(str[i], buffer, buff_i);
 		i++;
 	}
-	return (i);
+	return (count);
 }
 
 /**
