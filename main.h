@@ -27,6 +27,7 @@ typedef struct fmt_s fmt_t;
 int print_numbers(int num);
 int _abs(int num);
 void fmt_space(const char *str, int *i);
+void check_specifier(const char c, int *count);
 
 /* Prototypes - Others */
 int _putchar(char c);

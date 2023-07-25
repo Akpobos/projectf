@@ -26,18 +26,7 @@ int _printf(const char *format, ...)
 				break;
 			}
 			fmt_space(format, &i);
-			if (format[i] == '%')
-			{
-				count += _putchar(format[i]);
-			}
-			else
-			{
-				is_fnd = print_fmt(format[i], args);
-				if (is_fnd < 0)
-					count += _putchar(format[i]);
-				else
-					count += is_fnd;
-			}
+			check_specifier(format[i], &count);
 		}
 		else
 		{

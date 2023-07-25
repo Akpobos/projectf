@@ -46,3 +46,28 @@ void fmt_space(const char *str, int *i)
 	while (str[*i] == ' ')
 		*i = *i + 1;
 }
+
+/**
+ * check_specifier - Handles specifiers
+ * @c: The character
+ * @count: pointer print count
+ * Return: Nothing
+ */
+void check_specifier(const char c, int *count)
+{
+	if (c == '%')
+	{
+		*count += _putchar(c);
+	}
+	else
+	{
+		is_fnd = print_fmt(c, args);
+		if (is_fnd < 0)
+		{
+			*count += _putchar('%');
+			*count += _putchar(c);
+		}
+		else
+			*count += is_fnd;
+	}
+}
