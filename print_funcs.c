@@ -40,7 +40,7 @@ int print_str(va_list args)
  */
 int print_int(va_list args)
 {
-	int val = va_arg(args, int), count = 0;
+	long int val = va_arg(args, int), count = 0;
 
 	if (val < 0)
 		count += _putchar('-');
