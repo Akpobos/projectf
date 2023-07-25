@@ -36,6 +36,7 @@ int _printf(const char *format, ...)
 		i++;
 	}
 	va_end(args);
-	count += print_buffer(buffer, &buff_i);
+	if (buff_i > 0)
+		count += print_buffer(buffer, &buff_i);
 	return (count);
 }
