@@ -20,7 +20,11 @@ int _printf(const char *format, ...)
 		{
 			i++;
 			if (format[i] == '\0')
+			{
+				if (count == 0)
+					count = -1;
 				break;
+			}
 			fmt_space(format, &i);
 			if (format[i] == '%')
 			{
