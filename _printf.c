@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 					count = -1;
 				break;
 			}
-			fmt_space(format, &i);
+		/*	fmt_space(format, &i);*/
 			check_specifier(format[i], &count, args);
 		}
 		else

@@ -47,3 +47,16 @@ int print_int(va_list args)
 	count += print_numbers(_abs(val));
 	return (count);
 }
+
+/**
+ * print_bnry - Prints binary
+ * @args: va_list argument
+ *
+ * Return: number of characer printed
+ */
+int print_bnry(va_list args)
+{
+	unsigned int val = va_arg(args, unsigned int);
+
+	return (print_binary(val));
+}

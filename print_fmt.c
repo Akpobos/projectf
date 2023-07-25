@@ -12,11 +12,12 @@ int print_fmt(char c, va_list args)
 		{ 'c', print_char },
 		{ 's', print_str },
 		{ 'i', print_int },
-		{ 'd', print_int }
+		{ 'd', print_int },
+		{ 'b', print_bnry }
 	};
 	int i = 0;
 
-	while (i < 4)
+	while (i < 5)
 	{
 		if (fmts[i].c == c)
 		{
