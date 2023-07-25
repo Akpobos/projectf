@@ -32,7 +32,7 @@ int add_buffer(char c, char *buffer, int *buff_i)
 	else
 	{
 		buffer[*buff_i] = c;
-		*buff_i += 1;
+		*buff_i = *buff_i + 1;
 	}
 	return (count);
 }
