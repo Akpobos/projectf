@@ -29,10 +29,7 @@ int add_buffer(char c, char *buffer, int *buff_i)
 	{
 		count = print_buffer(buffer, buff_i);
 	}
-	else
-	{
-		buffer[*buff_i] = c;
-		*buff_i = *buff_i + 1;
-	}
+	buffer[*buff_i] = c;
+	*buff_i = *buff_i + 1;
 	return (count);
 }
