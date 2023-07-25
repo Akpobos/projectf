@@ -25,7 +25,7 @@ int add_buffer(char c, char *buffer, int *buff_i)
 {
 	int count = 0;
 
-	if (*buff_i == (BUFFER_SIZE - 1))
+	if (*buff_i == BUFFER_SIZE)
 	{
 		count = print_buffer(buffer, buff_i);
 	}
