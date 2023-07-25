@@ -72,7 +72,7 @@ int print_bnry(va_list args, char *buffer, int *buff_i)
  * @buff_i: buffer count
  * Return: number of characters printed
  */
-int print_u_int(va_list args, char *buffer, int * buff_i)
+int print_u_int(va_list args, char *buffer, int *buff_i)
 {
 	unsigned int val = va_arg(args, unsigned int);
 

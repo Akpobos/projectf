@@ -76,7 +76,12 @@ int print_binary(unsigned int num, char *buffer, int *buff_i)
  * @buff_i: buffer index
  * Return: Nothing
  */
-void check_specifier(const char c, int *count, va_list args, char *buffer, int *buff_i)
+void check_specifier(
+		const char c,
+		int *count,
+		va_list args,
+		char *buffer,
+		int *buff_i)
 {
 	int is_fnd;
 

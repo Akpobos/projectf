@@ -29,7 +29,12 @@ typedef struct fmt_s fmt_t;
 int print_numbers(int num, char *buffer, int *buff_i);
 int _abs(int num);
 void fmt_space(const char *str, int *i);
-void check_specifier(const char c, int *count, va_list args, char *buffer, int *buff_i);
+void check_specifier(
+		const char c,
+		int *count,
+		va_list args,
+		char *buffer,
+		int *buff_i);
 int print_binary(unsigned int num, char *buffer, int *buff_i);
 
 /* Prototypes - Utils_2 */
