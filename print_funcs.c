@@ -25,7 +25,7 @@ int print_str(va_list args, char *buffer, int *buff_i)
 	char *str = va_arg(args, char *);
 
 	if (!str)
-		str = "(null)";
+		str = NULL;
 	while (str[i])
 	{
 		count += add_buffer(str[i], buffer, buff_i);
