@@ -20,7 +20,7 @@ int _abs(int num)
  * @buff_i: buffer count
  * Return: number of character printed
  */
-int print_numbers(int num, char *buffer[], int *buff_i)
+int print_numbers(int num, char *buffer, int *buff_i)
 {
 	int count = 0, base = 10;
 
