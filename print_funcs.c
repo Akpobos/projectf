@@ -19,7 +19,7 @@ int print_char(va_list args, char *buffer, int *buff_i)
  * @buff_i: buffer count
  * Return: numbers of character printed to stdout
  */
-int print_str(va_list args, char *buffer, int *buff_i)
+int print_str(va_list args, char *buffer[], int *buff_i)
 {
 	int i = 0, count = 0;
 	char *str = va_arg(args, char *);
