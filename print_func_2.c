@@ -9,7 +9,7 @@
  */
 int print_octal(va_list args, char *buffer, int *buff_i)
 {
-	unsigned val = va_arg(args, unsigned int);
+	unsigned int val = va_arg(args, unsigned int);
 
 	return (print_8(val, buffer, buff_i));
 }

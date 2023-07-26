@@ -70,7 +70,7 @@ int print_8(unsigned int num, char *buffer, int *buff_i)
 	int count = 0;
 	unsigned int base = 8;
 
-	if(num > 7)
+	if (num > 7)
 	{
 		count += print_8(num / base, buffer, buff_i);
 		count += add_buffer((num % base) + '0', buffer, buff_i);
