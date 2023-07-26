@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_fmt - Select the right format and pring
+ * print_fmt - Select the right format and print
  * @c: Character specifier
  * @args: va_list argument
  * @buffer: The buffer
