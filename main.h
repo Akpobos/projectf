@@ -42,6 +42,11 @@ int print_buffer(char *buffer, int *buff_i);
 int add_buffer(char c, char *buffer, int *buff_i);
 int print_uint(unsigned int num, char *buffer, int *buff_i);
 int print_8(unsigned int num, char *buffer, int *buff_i);
+int print_h_l(unsigned int num, char *buffer, int *buff_i);
+
+/* Protypes - utils_3*/
+int run_hex(unsigned int num, int hex_case, char *buffer, int *buff_i);
+int print_h_u(unsigned int num, char *buffer, int *buff_i);
 
 /* Prototypes - Others */
 int _putchar(char c);
@@ -56,6 +61,8 @@ int print_u_int(va_list args, char *buffer, int *buff_i);
 
 /* Prototypes - print_func_2.c */
 int print_octal(va_list args, char *buffer, int *buff_i);
+int print_hex_lower(va_list args, char *buffer, int *buff_i);
+int print_hex_upper(va_list args, char *buffer, int *buff_i);
 
 /* Prototypes - Main */
 int _printf(const char *format, ...);

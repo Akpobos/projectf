@@ -81,3 +81,27 @@ int print_8(unsigned int num, char *buffer, int *buff_i)
 	}
 	return (count);
 }
+
+/**
+ * print_h_l - Prints numbers to stdout
+ * @num: The number
+ * @buffer: The buffer
+ * @buff_i: buffer count
+ * Return: number of character printed
+ */
+int print_h_l(unsigned int num, char *buffer, int *buff_i)
+{
+	int count = 0;
+	unsigned int base = 16;
+
+	if (num > 15)
+	{
+		count += print_h_l(num / base, buffer, buff_i);
+		count += run_hex(num % base, 0, buffer, buff_i);
+	}
+	else
+	{
+		count += run_hex(num, 0, buffer, buff_i);
+	}
+	return (count);
+}
