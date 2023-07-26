@@ -16,11 +16,12 @@ int print_fmt(char c, va_list args, char *buffer, int *buff_i)
 		{ 'i', print_int },
 		{ 'd', print_int },
 		{ 'b', print_bnry },
-		{ 'u', print_u_int }
+		{ 'u', print_u_int },
+		{ 'o', print_octal }
 	};
 	int i = 0;
 
-	while (i < 6)
+	while (i < 7)
 	{
 		if (fmts[i].c == c)
 		{

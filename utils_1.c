@@ -22,12 +22,12 @@ int _abs(int num)
  */
 int print_numbers(int num, char *buffer, int *buff_i)
 {
-	int count = 0;
+	int count = 0, base = 10;
 
 	if (num > 9)
 	{
-		count += print_numbers(num / 10, buffer, buff_i);
-		count += add_buffer((num % 10) + '0', buffer, buff_i);
+		count += print_numbers(num / base, buffer, buff_i);
+		count += add_buffer((num % base) + '0', buffer, buff_i);
 	}
 	else
 	{

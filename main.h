@@ -40,6 +40,8 @@ int print_binary(unsigned int num, char *buffer, int *buff_i);
 /* Prototypes - Utils_2 */
 int print_buffer(char *buffer, int *buff_i);
 int add_buffer(char c, char *buffer, int *buff_i);
+int print_uint(unsigned int num, char *buffer, int *buff_i);
+int print_8(unsigned int num, char *buffer, int *buff_i);
 
 /* Prototypes - Others */
 int _putchar(char c);
@@ -51,6 +53,9 @@ int print_str(va_list args, char *buffer, int *buff_i);
 int print_int(va_list args, char *buffer, int *buff_i);
 int print_bnry(va_list args, char *buffer, int *buff_i);
 int print_u_int(va_list args, char *buffer, int *buff_i);
+
+/* Prototypes - print_func_2.c */
+int print_octal(va_list args, char *buffer, int *buff_i);
 
 /* Prototypes - Main */
 int _printf(const char *format, ...);

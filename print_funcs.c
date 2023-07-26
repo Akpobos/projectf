@@ -76,5 +76,5 @@ int print_u_int(va_list args, char *buffer, int *buff_i)
 {
 	unsigned int val = va_arg(args, unsigned int);
 
-	return (print_numbers(val, buffer, buff_i));
+	return (print_uint(val, buffer, buff_i));
 }
